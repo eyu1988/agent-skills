@@ -1,5 +1,5 @@
 ---
-name: record
+name: eyu-record
 version: 1.1.0
 description: 把当前内容写入今日日捕获文件。白天随时说"记录一下：[内容]"触发。
 ---

@@ -1,5 +1,5 @@
 ---
-name: business-guide-writer
+name: eyu-business-guide-writer
 description: 创建或改进“业务优先”的软件模块技术导读文档。Use when the user asks to write a business guide, module guide, 业务导读, 业务说明, onboarding document, cross-module handoff, or troubleshooting-oriented guide from code. 重点输出业务概念、用户场景、权限、状态流转、数据链路和排障入口；代码链路只作为辅助索引。
 ---
 

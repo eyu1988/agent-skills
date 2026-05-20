@@ -1,5 +1,5 @@
 ---
-name: munger-mental-models
+name: eyu-munger-mental-models
 description: Use when the user asks for decision analysis, judgment improvement, risk identification, inversion thinking, incentive analysis, opportunity cost evaluation, or wants to apply Charlie Munger-style multidisciplinary mental models to a business, investment, product, career, technical, organizational, or personal decision.
 ---
 

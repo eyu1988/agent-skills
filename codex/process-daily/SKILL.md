@@ -1,5 +1,5 @@
 ---
-name: process-daily
+name: eyu-process-daily
 version: 1.1.0
 description: 读取今日日捕获文件，过滤、提炼并写入知识库。晚间说"处理今天"触发。
 ---
