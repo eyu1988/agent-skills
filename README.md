@@ -8,7 +8,8 @@ A collection of agent skills for Claude and Codex.
 agent-skills/
 ├── claude/
 │   ├── eyu-record/                 # Write content to daily capture file
-│   └── eyu-process-daily/          # Process and distill daily captures into knowledge base
+│   ├── eyu-process-daily/          # Process and distill daily captures into knowledge base
+│   └── eyu-log-pain/               # Log a new pain point with 5Why analysis and optional deep dive
 └── codex/
     ├── eyu-record/
     ├── eyu-process-daily/
@@ -86,6 +87,15 @@ Required config:
 - `CAPTURE_DIR` — path to your daily capture directory
 - `KNOWLEDGE_DIR` — path to your knowledge base root directory
 
+### log-pain (claude)
+
+Logs a new pain point into the pain management system. Auto-classifies domain and severity, runs a 5Why root cause analysis, appends to the registry, and optionally creates a three-layer solution file set.
+
+Trigger: `录入痛点：[描述]` / `我有个痛点` / `/log-pain [描述]`
+
+Required config:
+- `PAIN_DIR` — path to your pain management system directory
+
 ### business-guide-writer (codex)
 
 Creates or improves business-first module technical guide documents. Focuses on business concepts, user scenarios, permissions, state transitions, data flow, and troubleshooting entry points.
@@ -112,3 +122,4 @@ Skills use `{{VAR}}` placeholders replaced at install time by skill-hub:
 |-------------|-------------|
 | `{{CAPTURE_DIR}}` | Absolute path to daily capture directory |
 | `{{KNOWLEDGE_DIR}}` | Absolute path to knowledge base root directory |
+| `{{PAIN_DIR}}` | Absolute path to pain management system directory |
