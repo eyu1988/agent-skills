@@ -1,0 +1,8 @@
+interface:
+  display_name: "芒格思维模型"
+  short_description: "用跨学科模型审查决策"
+  brand_color: "#2563EB"
+  default_prompt: "使用 $munger-mental-models，从反向思考、激励机制、机会成本和安全边际角度审查这个决策。"
+
+policy:
+  allow_implicit_invocation: true
