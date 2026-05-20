@@ -1,5 +1,5 @@
 ---
-name: 处理今天
+name: process-daily
 version: 1.0.0
 description: 读取今日日捕获文件，过滤、提炼并写入知识库。晚间说"处理今天"触发。
 ---
