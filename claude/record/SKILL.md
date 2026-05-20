@@ -1,15 +1,15 @@
 ---
 name: record
-version: 1.0.0
+version: 1.1.0
 description: 把当前内容写入今日日捕获文件。白天随时说"记录一下：[内容]"触发。
 ---
 
-# 记录
+# record
 
 ## 路径常量
 
-- 日捕获目录：`/Users/lucas/Library/Mobile Documents/com~apple~CloudDocs/02_AINote/MyClaude/00_日捕获/`
-- 模板文件：`日捕获目录/_模板.md`
+- 日捕获目录：`{{CAPTURE_DIR}}`
+- 模板文件：`{{CAPTURE_DIR}}/_模板.md`
 
 ## 执行步骤
 
@@ -18,7 +18,7 @@ description: 把当前内容写入今日日捕获文件。白天随时说"记录
 ```bash
 date +%Y-%m-%d
 ```
-目标文件：`日捕获目录/YYYY-MM-DD.md`
+目标文件：`{{CAPTURE_DIR}}/YYYY-MM-DD.md`
 
 ### 第二步：文件不存在则创建
 
@@ -29,7 +29,7 @@ date +%Y-%m-%d
 从用户的触发语句中提取要记录的内容。支持以下触发形式：
 - `记录一下：[内容]`
 - `记录：[内容]`
-- `/记录 [内容]`
+- `/record [内容]`
 - 对话中直接描述（提取核心内容）
 
 ### 第四步：判断类型标签

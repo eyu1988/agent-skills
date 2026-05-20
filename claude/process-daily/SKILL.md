@@ -1,28 +1,26 @@
 ---
 name: process-daily
-version: 1.0.0
+version: 1.1.0
 description: 读取今日日捕获文件，过滤、提炼并写入知识库。晚间说"处理今天"触发。
 ---
 
-# 处理今天
+# process-daily
 
 ## 路径常量
 
-- 日捕获目录：`/Users/lucas/Library/Mobile Documents/com~apple~CloudDocs/02_AINote/MyClaude/00_日捕获/`
-- 知识库根目录：`/Users/lucas/Library/Mobile Documents/com~apple~CloudDocs/02_AINote/MyClaude/01_知识库/`
-- AI Coding 学习体系：`知识库根目录/AI_Coding_知识库/07_AI_Coding_学习体系/`
+- 日捕获目录：`{{CAPTURE_DIR}}`
+- 知识库根目录：`{{KNOWLEDGE_DIR}}`
 
 ## 执行步骤
 
 ### 第一步：定位今日文件
 
-用 Bash 获取今天日期：
 ```bash
 date +%Y-%m-%d
 ```
-拼出路径：`日捕获目录/YYYY-MM-DD.md`。
+拼出路径：`{{CAPTURE_DIR}}/YYYY-MM-DD.md`。
 
-文件不存在时输出：`今天没有日捕获文件，请先用 /记录 添加内容。` 然后停止。
+文件不存在时输出：`今天没有日捕获文件，请先用 /record 添加内容。` 然后停止。
 
 ### 第二步：读取并过滤
 
@@ -36,15 +34,15 @@ Read 今日文件，逐条过滤"📥 今日捕获"区域的内容。
 
 ### 第三步：分类并写入知识库
 
-对每条保留内容，判断应归入哪个文件：
+对每条保留内容，判断应归入哪个文件（路径相对于 `{{KNOWLEDGE_DIR}}`）：
 
 | 内容类型 | 目标文件 |
 |---------|---------|
-| CLI、工具用法 | `07_AI_Coding_学习体系/01_CLI.md` |
-| AI Coding 架构、技术地图 | `07_AI_Coding_学习体系/02_AICoding技术地图.md` |
-| ralph-loop、omh 相关 | `07_AI_Coding_学习体系/03_ralph-loop-omh演进.md` |
-| Agent、编排、Base 概念 | `07_AI_Coding_学习体系/04_AI_Coding_Base认知.md` |
-| 工作流、信息管理 | `知识库根目录/工作信息处理流.md` |
+| CLI、工具用法 | `AI_Coding_知识库/07_AI_Coding_学习体系/01_CLI.md` |
+| AI Coding 架构、技术地图 | `AI_Coding_知识库/07_AI_Coding_学习体系/02_AICoding技术地图.md` |
+| ralph-loop、omh 相关 | `AI_Coding_知识库/07_AI_Coding_学习体系/03_ralph-loop-omh演进.md` |
+| Agent、编排、Base 概念 | `AI_Coding_知识库/07_AI_Coding_学习体系/04_AI_Coding_Base认知.md` |
+| 工作流、信息管理 | `工作信息处理流.md` |
 | 其他技术概念 | `AI_Coding_知识库/` 下最匹配的文件，若无则新建 |
 
 写入方式：用 Edit 在对应文件末尾追加，格式：
