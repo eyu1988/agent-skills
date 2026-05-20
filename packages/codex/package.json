@@ -1,5 +1,5 @@
 {
-  "name": "@lucas/skills-codex",
+  "name": "@eyu1988/skills-codex",
   "version": "0.1.0",
   "description": "Codex agent skills",
   "main": "dist/index.js",

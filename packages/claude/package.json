@@ -1,5 +1,5 @@
 {
-  "name": "@lucas/skills-claude",
+  "name": "@eyu1988/skills-claude",
   "version": "0.1.0",
   "description": "Claude agent skills",
   "main": "dist/index.js",
