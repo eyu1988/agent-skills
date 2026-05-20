@@ -7,13 +7,13 @@ A collection of agent skills for Claude and Codex.
 ```
 agent-skills/
 ├── claude/
-│   ├── record/                 # Write content to daily capture file
-│   └── process-daily/          # Process and distill daily captures into knowledge base
+│   ├── eyu-record/                 # Write content to daily capture file
+│   └── eyu-process-daily/          # Process and distill daily captures into knowledge base
 └── codex/
-    ├── record/
-    ├── process-daily/
-    ├── business-guide-writer/  # Create business-first module technical guides
-    └── munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
+    ├── eyu-record/
+    ├── eyu-process-daily/
+    ├── eyu-business-guide-writer/  # Create business-first module technical guides
+    └── eyu-munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
 ```
 
 ## Installation
