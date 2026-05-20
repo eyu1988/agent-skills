@@ -20,7 +20,7 @@ Install skills via [skill-hub](https://github.com/eyu1988/skill-hub):
 
 ```bash
 # Install skill-hub
-npm install -g skill-hub
+npm install -g @eyu1988/skill-hub --registry https://registry.npmjs.org/
 
 # Set default repo
 skill-hub config set DEFAULT_REPO eyu1988/agent-skills
