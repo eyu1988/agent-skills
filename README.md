@@ -15,7 +15,8 @@ agent-skills/
     ├── eyu-process-daily/
     ├── eyu-business-guide-writer/  # Create business-first module technical guides
     ├── eyu-munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
-    └── eyu-claude-style-collab/    # Tune Codex to Claude Code's collaboration style
+    ├── eyu-claude-style-collab/    # Tune Codex to Claude Code's collaboration style
+    └── eyu-log-pain/               # Log a new pain point with 5Why analysis and optional deep dive
 ```
 
 ## Installation
@@ -87,7 +88,7 @@ Required config:
 - `CAPTURE_DIR` — path to your daily capture directory
 - `KNOWLEDGE_DIR` — path to your knowledge base root directory
 
-### log-pain (claude)
+### log-pain (claude, codex)
 
 Logs a new pain point into the pain management system. Auto-classifies domain and severity, runs a 5Why root cause analysis, appends to the registry, and optionally creates a three-layer solution file set.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "痛点登记"
+  short_description: "录入新痛点，完成 5Why 根因分析，登记入册，可选深入分析并创建三层解决方案文件。"
+  default_prompt: "我有个新痛点想录入，帮我完成分类、根因分析和登记。"
