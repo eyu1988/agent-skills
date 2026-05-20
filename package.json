@@ -1,0 +1,13 @@
+{
+  "name": "agent-skills",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "lint": "pnpm -r lint",
+    "publish:all": "pnpm -r publish --access public"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
