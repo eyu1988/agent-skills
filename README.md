@@ -16,27 +16,50 @@ agent-skills/
 
 ## Installation
 
-Install skills via [skill-hub](https://github.com/eyu1988/skill-hub):
+Install skills via [skill-hub](https://github.com/eyu1988/skill-hub).
+
+### Claude (default)
 
 ```bash
 # Install skill-hub
 npm install -g @eyu1988/skill-hub --registry https://registry.npmjs.org/
 
-# Set default repo
+# Configure
 skill-hub config set DEFAULT_REPO eyu1988/agent-skills
-
-# Configure paths (prompted automatically on first install)
+skill-hub config set DEFAULT_AGENT claude
 skill-hub config set CAPTURE_DIR "/path/to/your/daily-captures"
 skill-hub config set KNOWLEDGE_DIR "/path/to/your/knowledge-base"
 
-# Install all Claude skills
-skill-hub install --agent claude
+# Install all skills
+skill-hub install
+```
 
-# Install all Codex skills
-skill-hub install --agent codex
+### Codex (primary agent)
 
-# Install a single skill
-skill-hub install --agent claude --skill record
+```bash
+# Install skill-hub
+npm install -g @eyu1988/skill-hub --registry https://registry.npmjs.org/
+
+# Configure
+skill-hub config set DEFAULT_REPO eyu1988/agent-skills
+skill-hub config set DEFAULT_AGENT codex
+skill-hub config set CAPTURE_DIR "/path/to/your/daily-captures"
+skill-hub config set KNOWLEDGE_DIR "/path/to/your/knowledge-base"
+
+# Install all skills
+skill-hub install
+```
+
+### Common commands
+
+```bash
+skill-hub install --skill record        # Install a single skill
+skill-hub update                        # Update all skills
+skill-hub update --skill record         # Update a single skill
+skill-hub remove --skill record         # Remove a single skill
+skill-hub list                          # List installed skills
+skill-hub search                        # List available skills in repo
+skill-hub config list                   # Show current config
 ```
 
 ## Skills
