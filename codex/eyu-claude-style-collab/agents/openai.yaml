@@ -1,0 +1,7 @@
+interface:
+  display_name: "Claude Style Collab"
+  short_description: "Make Codex collaborate more like Claude Code"
+  default_prompt: "Use $claude-style-collab to handle this task with a Claude-style coding workflow: read context first, execute proactively, keep progress updates short, and close the loop with verification."
+
+policy:
+  allow_implicit_invocation: true
