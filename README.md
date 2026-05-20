@@ -13,7 +13,8 @@ agent-skills/
     ├── eyu-record/
     ├── eyu-process-daily/
     ├── eyu-business-guide-writer/  # Create business-first module technical guides
-    └── eyu-munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
+    ├── eyu-munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
+    └── eyu-claude-style-collab/    # Tune Codex to Claude Code's collaboration style
 ```
 
 ## Installation
@@ -96,6 +97,12 @@ Trigger: `write a business guide` / `业务导读` / `module guide`
 Applies Charlie Munger-style multidisciplinary mental models to decisions. Use for decision analysis, risk identification, inversion thinking, incentive analysis, and opportunity cost evaluation.
 
 Trigger: `decision analysis` / `mental models` / `munger`
+
+### claude-style-collab (codex)
+
+Tunes Codex to Claude Code's collaboration style: read code before acting, default to execution over discussion, sync progress continuously, self-verify after changes, and close the loop with results.
+
+Trigger: `像 Claude 那样配合` / `按 Claude Code 的方式来` / `不要只分析，直接做完`
 
 ## Placeholders
 
