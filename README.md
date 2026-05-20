@@ -7,11 +7,13 @@ A collection of agent skills for Claude and Codex.
 ```
 agent-skills/
 ├── claude/
-│   ├── record/         # Write content to daily capture file
-│   └── process-daily/  # Process and distill daily captures into knowledge base
+│   ├── record/                 # Write content to daily capture file
+│   └── process-daily/          # Process and distill daily captures into knowledge base
 └── codex/
     ├── record/
-    └── process-daily/
+    ├── process-daily/
+    ├── business-guide-writer/  # Create business-first module technical guides
+    └── munger-mental-models/   # Apply Charlie Munger-style mental models to decisions
 ```
 
 ## Installation
@@ -64,7 +66,7 @@ skill-hub config list                   # Show current config
 
 ## Skills
 
-### record
+### record (claude, codex)
 
 Writes content to today's daily capture file.
 
@@ -73,7 +75,7 @@ Trigger: `记录一下：[content]` / `/record [content]`
 Required config:
 - `CAPTURE_DIR` — path to your daily capture directory
 
-### process-daily
+### process-daily (claude, codex)
 
 Reads today's capture file, filters and distills entries into the knowledge base.
 
@@ -82,6 +84,18 @@ Trigger: `处理今天` / `/process-daily`
 Required config:
 - `CAPTURE_DIR` — path to your daily capture directory
 - `KNOWLEDGE_DIR` — path to your knowledge base root directory
+
+### business-guide-writer (codex)
+
+Creates or improves business-first module technical guide documents. Focuses on business concepts, user scenarios, permissions, state transitions, data flow, and troubleshooting entry points.
+
+Trigger: `write a business guide` / `业务导读` / `module guide`
+
+### munger-mental-models (codex)
+
+Applies Charlie Munger-style multidisciplinary mental models to decisions. Use for decision analysis, risk identification, inversion thinking, incentive analysis, and opportunity cost evaluation.
+
+Trigger: `decision analysis` / `mental models` / `munger`
 
 ## Placeholders
 
