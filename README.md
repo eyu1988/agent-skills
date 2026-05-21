@@ -9,7 +9,8 @@ agent-skills/
 ├── claude/
 │   ├── eyu-record/                 # Write content to daily capture file
 │   ├── eyu-process-daily/          # Process and distill daily captures into knowledge base
-│   └── eyu-log-pain/               # Log a new pain point with 5Why analysis and optional deep dive
+│   ├── eyu-log-pain/               # Log a new pain point with 5Why analysis and optional deep dive
+│   └── eyu-teach/                  # Tech mentor mode: explain concept, save to file, quiz and score
 └── codex/
     ├── eyu-record/
     ├── eyu-process-daily/
@@ -97,6 +98,15 @@ Trigger: `录入痛点：[描述]` / `我有个痛点` / `/log-pain [描述]`
 Required config:
 - `PAIN_DIR` — path to your pain management system directory
 
+### teach (claude)
+
+Tech mentor mode. Scans already-taught concepts and their scores, delivers a structured 6-part lecture on the requested concept, saves it to a dedicated file simultaneously, then quizzes interactively and writes scores back.
+
+Trigger: `老师傅，今天讲[概念]` / `老师傅，继续[概念]`
+
+Required config:
+- `TEACH_DIR` — path to your `GROW-002-技术教练机制` directory
+
 ### business-guide-writer (codex)
 
 Creates or improves business-first module technical guide documents. Focuses on business concepts, user scenarios, permissions, state transitions, data flow, and troubleshooting entry points.
@@ -124,3 +134,4 @@ Skills use `{{VAR}}` placeholders replaced at install time by skill-hub:
 | `{{CAPTURE_DIR}}` | Absolute path to daily capture directory |
 | `{{KNOWLEDGE_DIR}}` | Absolute path to knowledge base root directory |
 | `{{PAIN_DIR}}` | Absolute path to pain management system directory |
+| `{{TEACH_DIR}}` | Absolute path to `GROW-002-技术教练机制` directory |
